@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 * {
 	margin: 0;
 	padding: 0;
@@ -8,8 +9,11 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+	gap: 3rem;
+	font-family: 'Poppins', sans-serif;
 }
-.clock {
+.analog-clock {
 	margin: 0 auto;
 	position: relative;
 	width: 300px;
@@ -23,7 +27,7 @@ body {
 		5px 7px 10px -1px rgba(166, 166, 166, 0.25) inset;
 }
 
-.clock__numbers {
+.analog-clock__numbers {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -32,7 +36,7 @@ body {
 	height: 100%;
 }
 
-.clock__number {
+.analog-clock__number {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -42,7 +46,7 @@ body {
 	font-size: 20px;
 	color: rgb(199, 199, 199);
 }
-.clock__center {
+.analog-clock__center {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -53,7 +57,7 @@ body {
 	border-radius: 50%;
 	z-index: 1;
 }
-.clock__center::before {
+.analog-clock__center::before {
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -64,7 +68,7 @@ body {
 	width: 60%;
 	height: 60%;
 }
-.clock__hours::before {
+.analog-clock__hours::before {
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -75,7 +79,7 @@ body {
 	background: #000;
 	border-radius: 1rem;
 }
-.clock__minutes::before {
+.analog-clock__minutes::before {
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -86,7 +90,7 @@ body {
 	background: #000;
 	border-radius: 1rem;
 }
-.clock__seconds::before {
+.analog-clock__seconds::before {
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -97,13 +101,30 @@ body {
 	background: #3f3db6;
 	border-radius: 1rem;
 }
-.clock__seconds,
-.clock__minutes,
-.clock__hours {
+.analog-clock__seconds,
+.analog-clock__minutes,
+.analog-clock__hours {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 8%;
 	height: 8%;
+}
+
+.digital-clock {
+	position: relative;
+	font-size: 100px;
+	font-weight: 400;
+}
+.digital-clock__meridiem {
+	position: absolute;
+	bottom: 70%;
+	left: 100%;
+	font-size: 2.7rem;
+}
+.date {
+	color: #605e65;
+	font-size: 20px;
+	font-weight: 400;
 }
