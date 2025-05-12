@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		currentHours = currentHours % 12;
 		digitalClockHours.textContent = currentHours < 10 ? `0${currentHours}` : currentHours;
-		digitalClockMinutes.textContent = currentMinutes;
+		digitalClockMinutes.textContent = currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
 	};
 
 	const updateDate = (currentDate) => {
