@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		digitalClockMeridiem.textContent = currentHours < 12 ? 'AM' : 'PM';
 
-		currentHours = currentHours % 12;
+		currentHours = currentHours % 12 === 0 ? 12 : currentHours % 12;
 		digitalClockHours.textContent = currentHours < 10 ? `0${currentHours}` : currentHours;
 		digitalClockMinutes.textContent = currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
 	};
