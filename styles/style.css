@@ -12,6 +12,7 @@ body {
 	flex-direction: column;
 	gap: 3rem;
 	font-family: 'Poppins', sans-serif;
+	background: #eaecf3;
 }
 .analog-clock {
 	margin: 0 auto;
